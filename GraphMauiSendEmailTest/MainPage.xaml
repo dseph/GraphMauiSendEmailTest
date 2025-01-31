@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GraphMauiSendEmailTest.MainPage">
+
+    <StackLayout>
+        <Label  
+            Text="Graph Maui Send Email Test"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            />
+        <Label  
+            Text="This will send an email to mail adress of the the user who authenticates."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            />
+
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="AppIdLabel"
+                Text="App ID:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+                x:Name="AppIdEntry"
+                Placeholder="Enter Application/Client ID"
+                SelectionLength="10" 
+                HorizontalOptions="Start"
+                Text=""
+                />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="TenantIdLabel"
+                Text="Tenant ID:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="TenantIdEntry"
+               Placeholder="Enter Tenant ID"
+               SelectionLength="10" 
+               Text="dd55b8f6-446e-4cfb-8A82-5d5a4Xd3b5ae"
+               />
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="ClientSecret"
+                Text="Tenant ID:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="ClientSecretEntry"
+               Placeholder="Client Secret"
+               SelectionLength="10" 
+               Text="xxxxxxxxxxxxxx"
+                IsPassword="true" 
+               />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="LabelFromAddress"
+                Text="From:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="FromAddress"
+               Placeholder="From SMTP Address:"
+               SelectionLength="10" 
+                 Keyboard="Email" 
+               Text="abc@contoso.com"
+               />
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="LabelToAddress"
+                Text="To:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="ToAddress"
+               Placeholder="To SMTP Address"
+               SelectionLength="10" 
+                 Keyboard="Email" 
+               Text="cba@contoso.com"
+               />
+        </StackLayout>
+
+
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="LabelSubject"
+                Text="Subject:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="Subject"
+               Placeholder="Subject"
+               SelectionLength="10" 
+               Text="xxxxx"
+               />
+            
+            
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="LabelBody"
+                Text="Message Body:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="Body"
+               Placeholder="Body Entry"
+               SelectionLength="10" 
+               Text="Hello World"
+               />
+
+
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"  >
+            <Label  
+                x:Name="LabelAttatchmentFilePath"
+                Text="Subject:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" 
+                />
+
+            <Entry  
+               x:Name="AttatchmentFilePath"
+               Placeholder="Attachement File Path"
+               SelectionLength="10" 
+               Text="xxxxx"
+               />
+
+
+        </StackLayout>
+
+        <!--<StackLayout Orientation="Horizontal"  >
+            <Label 
+                x:Name="ScopesLabel"
+                Text="Scopes:"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Start" />
+
+            <Entry 
+                x:Name="ScopesEntry"
+               Placeholder="Enter Scopes"
+               SelectionLength="10" 
+               Text=""
+               />
+        </StackLayout>-->
+
+        <StackLayout >
+            <Border StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                Background="#2B0B98"
+                Padding="16,8"
+                HorizontalOptions="Center">
+                <Border.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Orange"
+                                    Offset="0.1" />
+                        <GradientStop Color="Brown"
+                                    Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Stroke>
+
+                <Button 
+                    x:Name="SendEMail"
+                    Text="Send Email"
+                    FontAttributes="Bold"
+                    SemanticProperties.Hint="Test"
+                    Clicked="On_SendEmail_Clicked"
+                    HorizontalOptions="Center" />
+            </Border>
+
+
+        </StackLayout>
+
+ 
+
+
+    </StackLayout>
+</ContentPage>
